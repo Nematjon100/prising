@@ -1,13 +1,5 @@
 
 /* GLOBAL */
-:root {
-  --primary: #;
-  --font-size: 16px;
-  --text-color: #;
-  --bg-color: #;
-  --font-family: 'Roboto', 'Arial', sans-serif;
-}
-
 
 html {
   box-sizing: border-box;
@@ -27,35 +19,89 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: var(--font-family);
-  font-size: 16px;
-  line-height: 1.5;
+  font-family:'Montserrat', 'Arial', sans-serif;
+  font-size: 15px;
+  line-height: 28px;
   font-weight: 400;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: #f7f7fe;
+  color: #6E728E;
+  background-image: url('/img/bg-left.svg'),
+    url('/img/bg-right.svg');
+  background-position: left -120px bottom -460px,
+    top -100px right -100px;
+  background-repeat: no-repeat;
+
 }
 
 img {
   max-width: 100%;
   height: auto;
 }
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
 /* -----BUTTONS-----*/
 .button {
+  display: inline-block;
+  padding: 14px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  margin: 0;
+  font-size: 13px;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  background-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.button-primary {
+  background-color:#6D72DE;
+  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  color: #fff;
+}
+
+.button-primary:hover {
+  background-color: #fff;
+  background-image: none;
+  color: #6D72DE;
+  border-color:  #6D72DE;
+}
+
+.button-white {
+  color: #6D72DE;
+  background-color: #fff;
+}
+
+.button-white:hover {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
 }
 
 /* CONTAINER */
 .container {
   width: 100%;
   max-width: 1100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-right: auto;
   margin-left: auto;
 }
-
-
-/*-----HEADER------ */
 
 
 
@@ -64,8 +110,90 @@ img {
   flex-grow: 1;
 }
 
-/* ----HERO----*/
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 
+.page-title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.pricing {
+  width: 100%;
+}
+
+.pricing-inner {
+  display: flex;
+  align-items: center;
+}
+
+.pricing-plan {
+  flex-grow: 1;
+  max-width: 350px;
+  padding: 32px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.pricing-plan:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pricing-plan:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.pricing-plan-best {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  border-radius: 10px;
+  background-color:#696EDD;
+  background-image: linear-gradient(135deg, #A2A7F0 -0.05%, #696EDD 100.05%);
+  color: #fff;
+}
+
+.pricing-plan__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.pricing-plan__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: -2px;
+}
+
+.pricing-plan__currency {
+  margin-right: 8px;
+  font-size: 40px;
+}
+
+.pricing-plan__features {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 32px;
+  border-top: 1px solid rgba(110, 114, 142, 0.25);
+  list-style: none;
+}
+
+.pricing-plan__feature {
+  padding: 12px;
+  border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+}
 
 
 /* -------------------------RETINA DISPLAY------------------------ */
